@@ -1,51 +1,52 @@
 ﻿using System;
 
-namespace primer_proyecto
+namespace segundo_proyecto
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-        int a = 3;
-		int b = 6;
-		int c = 9;
-		
-        Console.WriteLine("ENUNCIADO");
-        Console.WriteLine("Hacer un programa que produzca números aacb, bca, bcbc");
-		Console.WriteLine("donde muestre un número de tres dígitos formado por tres");
-        Console.WriteLine("variables numéricas en diferentes combinaciones.");
-       
-        Console.WriteLine();
-        Console.WriteLine("Los números establecidos por el operador son: a = 3, b = 6, c = 9.");
+                Console.WriteLine("ENUNCIADO");
+                Console.WriteLine("Hacer un programa el cual filtre por medio de la edad y");
+	            Console.WriteLine("de la estatura a las personas que desean entrar a un parque.");
 
-        //PRIMER ORDEN: AACB
-		Console.WriteLine("PRIMER ORDEN:");
-        Console.Write(a);
-		Console.Write(a);
-		Console.Write(c);
-		Console.WriteLine(b);
-		
-		Console.WriteLine();
-		
-		//SEGUNDO ORDEN: BCA
-		Console.WriteLine("SEGUNDO ORDEN:");
-        Console.Write(b);
-		Console.Write(c);
-		Console.WriteLine(a);
-		
-		Console.WriteLine();
-
-		//TERCER ORDEN: BCBC
-		Console.WriteLine("TERCER ORDEN:");
-        Console.Write(b);
-		Console.Write(c);
-		Console.Write(b);
-		Console.WriteLine(c);
-        
-					
-		
-		
-	
+                string cadena ="";
+                int edad = 0;
+                double altura = 0.0;
+          
+                Console.WriteLine();
+                Console.WriteLine("Buenas, por favor ingrese su Edad:");
+                cadena = Console.ReadLine();
+                edad = Convert.ToInt32(cadena);
+            
+                 if(edad >= 18)
+                {
+                Console.WriteLine("Disculpe ha superado el limite de Edad para ingresar al Parque.");
+                Console.WriteLine("Hasta Luego");
+                }
+                else
+                {          
+                Console.WriteLine("BIENVENIDO");
+                Console.WriteLine();
+                Console.WriteLine("¿Favor Ingresar su Altura? en metros y usando coma");
+                cadena = Console.ReadLine();
+                altura = Convert.ToDouble(cadena);
+                                
+                if(altura < 1.6)
+                {
+                    Console.WriteLine("Puedes ir a la Casa Encantada, el Gusanito y el Carrusel");    
+                }
+                else
+                {
+                    Console.WriteLine("Puedes ir a la Casa Encantada, el Gusanito, el Carrusel y a la Montaña Rusa");      
+                }
+                    Console.WriteLine("¡Vuelve Prontooo!");   
+                }
+            
+            
+            
+            
+            Console.ReadKey();
         }
     }
 }
